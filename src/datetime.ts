@@ -32,13 +32,13 @@ export class NguiDatetime {
 
   static daysOfWeek: any[] =
     typeof moment === 'undefined' ? [
-      {fullName: 'Sunday', shortName: 'Su'},
-      {fullName: 'Monday', shortName: 'Mo'},
-      {fullName: 'Tuesday', shortName: 'Tu'},
-      {fullName: 'Wednesday', shortName: 'We'},
-      {fullName: 'Thursday', shortName: 'Th'},
-      {fullName: 'Friday', shortName: 'Fr'},
-      {fullName: 'Saturday', shortName: 'Sa'}
+      {fullName: 'Domingo', shortName: 'Dom'},
+      {fullName: 'Segunda', shortName: 'Seg'},
+      {fullName: 'Terça', shortName: 'Ter'},
+      {fullName: 'Quarta', shortName: 'Qua'},
+      {fullName: 'Quinta', shortName: 'Qui'},
+      {fullName: 'Sexta', shortName: 'Sex'},
+      {fullName: 'Sábado', shortName: 'Sab'}
     ] : moment.weekdays().map((el, index) => {
       return {
         fullName: el,
@@ -50,18 +50,18 @@ export class NguiDatetime {
     typeof moment === 'undefined' ? 0 : moment.localeData().firstDayOfWeek();
 
   static months: any[] = typeof moment === 'undefined' ? [
-    {fullName: 'January', shortName: 'Jan'},
-    {fullName: 'February', shortName: 'Feb'},
-    {fullName: 'March', shortName: 'Mar'},
-    {fullName: 'April', shortName: 'Apr'},
-    {fullName: 'May', shortName: 'May'},
-    {fullName: 'June', shortName: 'Jun'},
-    {fullName: 'July', shortName: 'Jul'},
-    {fullName: 'August', shortName: 'Aug'},
-    {fullName: 'September', shortName: 'Sep'},
-    {fullName: 'October', shortName: 'Oct'},
-    {fullName: 'November', shortName: 'Nov'},
-    {fullName: 'December', shortName: 'Dec'}
+    {fullName: 'Janeiro', shortName: 'Jan'},
+    {fullName: 'Fevereiro', shortName: 'Fev'},
+    {fullName: 'Março', shortName: 'Mar'},
+    {fullName: 'Abril', shortName: 'Abr'},
+    {fullName: 'Maio', shortName: 'Mai'},
+    {fullName: 'Junho', shortName: 'Jun'},
+    {fullName: 'Julho', shortName: 'Jul'},
+    {fullName: 'Agosto', shortName: 'Ago'},
+    {fullName: 'Setembro', shortName: 'Set'},
+    {fullName: 'Outubro', shortName: 'Out'},
+    {fullName: 'Novembro', shortName: 'Nov'},
+    {fullName: 'Dezembro', shortName: 'Dezs'}
   ] : moment.months().map((el, index) => {
     return {
       fullName: el,
