@@ -118,16 +118,16 @@ var NguiDatetimePickerComponent = (function () {
         this.minute = (new Date()).getMinutes();
         this.selectDateTime();
     };
-    /** 
-     * set the hour and minute 
-     * @param hour {string} 
-     * @param minute {string} 
-     */ 
-    NguiDatetimePickerComponent.prototype.selectTime = function (hour, minute) { 
-        //NOTE: must get hour & minute because 2-way binding does not work with range input in IE <= 11 
-        this.hour = parseInt(hour, 10) || 0; 
-        this.minute = parseInt(minute, 10) || 0; 
-        this.selectDateTime(); 
+    /**
+     * set the hour and minute
+     * @param hour {string}
+     * @param minute {string}
+     */
+    NguiDatetimePickerComponent.prototype.selectTime = function (hour, minute) {
+        //NOTE: must get hour & minute because 2-way binding does not work with range input in IE <= 11
+        this.hour = parseInt(hour, 10) || 0;
+        this.minute = parseInt(minute, 10) || 0;
+        this.selectDateTime();
     };
     /**
      * set the selected date and close it when closeOnSelect is true
@@ -212,11 +212,11 @@ var NguiDatetimePickerComponent = (function () {
                 },] },
     ];
     /** @nocollapse */
-    NguiDatetimePickerComponent.ctorParameters = [
+    NguiDatetimePickerComponent.ctorParameters = function () { return [
         { type: core_1.ElementRef, },
         { type: datetime_1.NguiDatetime, },
         { type: core_1.ChangeDetectorRef, },
-    ];
+    ]; };
     NguiDatetimePickerComponent.propDecorators = {
         'dateFormat': [{ type: core_1.Input, args: ['date-format',] },],
         'dateOnly': [{ type: core_1.Input, args: ['date-only',] },],

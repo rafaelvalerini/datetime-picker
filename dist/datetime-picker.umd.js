@@ -52,7 +52,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	var datetime_1 = __webpack_require__(1);
@@ -65,9 +65,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.NguiDatetimePickerModule = datetime_picker_module_1.NguiDatetimePickerModule;
 
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -245,13 +245,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    NguiDatetime.days = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 	    NguiDatetime.weekends = [0, 6];
 	    NguiDatetime.daysOfWeek = typeof moment === 'undefined' ? [
-	        { fullName: 'Sunday', shortName: 'Su' },
-	        { fullName: 'Monday', shortName: 'Mo' },
-	        { fullName: 'Tuesday', shortName: 'Tu' },
-	        { fullName: 'Wednesday', shortName: 'We' },
-	        { fullName: 'Thursday', shortName: 'Th' },
-	        { fullName: 'Friday', shortName: 'Fr' },
-	        { fullName: 'Saturday', shortName: 'Sa' }
+	        { fullName: 'Domingo', shortName: 'Dom' },
+	        { fullName: 'Segunda', shortName: 'Seg' },
+	        { fullName: 'Terça', shortName: 'Ter' },
+	        { fullName: 'Quarta', shortName: 'Qua' },
+	        { fullName: 'Quinta', shortName: 'Qui' },
+	        { fullName: 'Sexta', shortName: 'Sex' },
+	        { fullName: 'Sábado', shortName: 'Sab' }
 	    ] : moment.weekdays().map(function (el, index) {
 	        return {
 	            fullName: el,
@@ -260,18 +260,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	    NguiDatetime.firstDayOfWeek = typeof moment === 'undefined' ? 0 : moment.localeData().firstDayOfWeek();
 	    NguiDatetime.months = typeof moment === 'undefined' ? [
-	        { fullName: 'January', shortName: 'Jan' },
-	        { fullName: 'February', shortName: 'Feb' },
-	        { fullName: 'March', shortName: 'Mar' },
-	        { fullName: 'April', shortName: 'Apr' },
-	        { fullName: 'May', shortName: 'May' },
-	        { fullName: 'June', shortName: 'Jun' },
-	        { fullName: 'July', shortName: 'Jul' },
-	        { fullName: 'August', shortName: 'Aug' },
-	        { fullName: 'September', shortName: 'Sep' },
-	        { fullName: 'October', shortName: 'Oct' },
-	        { fullName: 'November', shortName: 'Nov' },
-	        { fullName: 'December', shortName: 'Dec' }
+	        { fullName: 'Janeiro', shortName: 'Jan' },
+	        { fullName: 'Fevereiro', shortName: 'Fev' },
+	        { fullName: 'Março', shortName: 'Mar' },
+	        { fullName: 'Abril', shortName: 'Abr' },
+	        { fullName: 'Maio', shortName: 'Mai' },
+	        { fullName: 'Junho', shortName: 'Jun' },
+	        { fullName: 'Julho', shortName: 'Jul' },
+	        { fullName: 'Agosto', shortName: 'Ago' },
+	        { fullName: 'Setembro', shortName: 'Set' },
+	        { fullName: 'Outubro', shortName: 'Out' },
+	        { fullName: 'Novembro', shortName: 'Nov' },
+	        { fullName: 'Dezembro', shortName: 'Dezs' }
 	    ] : moment.months().map(function (el, index) {
 	        return {
 	            fullName: el,
@@ -287,15 +287,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.NguiDatetime = NguiDatetime;
 
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -427,16 +427,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.selectDateTime();
 	    };
 	    /**
-	     * set the hour and minute 
-	     * @param hour {string} 
-	     * @param minute {string} 
-	     */ 
-	    NguiDatetimePickerComponent.prototype.selectTime = function (hour, minute) { 
-	        //NOTE: must get hour & minute because 2-way binding does not work with range input in IE <= 11 
-	        this.hour = parseInt(hour, 10) || 0; 
-	        this.minute = parseInt(minute, 10) || 0; 
-	        this.selectDateTime(); 
-	    }; 
+	     * set the hour and minute
+	     * @param hour {string}
+	     * @param minute {string}
+	     */
+	    NguiDatetimePickerComponent.prototype.selectTime = function (hour, minute) {
+	        //NOTE: must get hour & minute because 2-way binding does not work with range input in IE <= 11
+	        this.hour = parseInt(hour, 10) || 0;
+	        this.minute = parseInt(minute, 10) || 0;
+	        this.selectDateTime();
+	    };
 	    /**
 	     * set the selected date and close it when closeOnSelect is true
 	     * @param date {Date}
@@ -613,9 +613,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.NguiDatetimePickerComponent = NguiDatetimePickerComponent;
 
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1055,15 +1055,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.NguiDatetimePickerDirective = NguiDatetimePickerDirective;
 
 
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = __WEBPACK_EXTERNAL_MODULE_5__;
 
-/***/ },
+/***/ }),
 /* 6 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1099,13 +1099,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.NguiDatetimePickerModule = NguiDatetimePickerModule;
 
 
-/***/ },
+/***/ }),
 /* 7 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = __WEBPACK_EXTERNAL_MODULE_7__;
 
-/***/ }
+/***/ })
 /******/ ])
 });
 ;

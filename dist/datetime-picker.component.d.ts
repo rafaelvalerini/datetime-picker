@@ -48,6 +48,12 @@ export declare class NguiDatetimePickerComponent {
     toDateOnly(date: Date): Date;
     selectCurrentTime(): void;
     /**
+     * set the hour and minute
+     * @param hour {string}
+     * @param minute {string}
+     */
+    selectTime(hour: any, minute: any): void;
+    /**
      * set the selected date and close it when closeOnSelect is true
      * @param date {Date}
      */

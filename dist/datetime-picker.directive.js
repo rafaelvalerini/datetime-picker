@@ -332,11 +332,11 @@ var NguiDatetimePickerDirective = (function () {
                 },] },
     ];
     /** @nocollapse */
-    NguiDatetimePickerDirective.ctorParameters = [
+    NguiDatetimePickerDirective.ctorParameters = function () { return [
         { type: core_1.ComponentFactoryResolver, },
         { type: core_1.ViewContainerRef, },
         { type: forms_1.ControlContainer, decorators: [{ type: core_1.Optional }, { type: core_1.Host }, { type: core_1.SkipSelf },] },
-    ];
+    ]; };
     NguiDatetimePickerDirective.propDecorators = {
         'dateFormat': [{ type: core_1.Input, args: ['date-format',] },],
         'parseFormat': [{ type: core_1.Input, args: ['parse-format',] },],
